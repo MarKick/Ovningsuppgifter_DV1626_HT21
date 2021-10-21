@@ -30,7 +30,7 @@
 
 5. Vad finns det för fördelar med att kompilera programmet innan det körs?
 
-6. Vad kommer följande kodsnutt skriva ut i terminalen?
+6. Givet följande kod:
 
 ```
 #include <iostream>
@@ -45,11 +45,9 @@ int main() {
     return 0;
 }
 ```
-a.) Gissa först vad som kommer skrivas ut?
-
-b.) Kör programmet. Blev outputen som du trodde?
-
-c.) Förklara för en kurskamrat/annan person varför outputen blir som den blir. 
+- Gissa vad som kommer skrivas ut?
+- Kör programmet. Blev outputen som du trodde?
+- Förklara för en kurskamrat/annan person varför outputen blir som den blir. 
 
 
 ## Föreläsning 2
@@ -62,17 +60,15 @@ c.) Förklara för en kurskamrat/annan person varför outputen blir som den blir
 ### Excercises 
 1. Skriv ett program som itererar alla element i olika behållare du skapat och skriver ut ett element per rad. Behållaren ska skapas i en headerfil som sedan inkluderas i cpp-filen. 
 
-    a.) Om behållaren är en vektor 
-
-    b.) Är en en statisk array 
-
-    c.) En vector i en vector. Ex.) std::vector<std::vector<int>> vec
+- Om behållaren är en vektor 
+- Är en en statisk array 
+- En vector i en vector. Ex.) std::vector<std::vector<int>> vec
 
 2. Skriv ett program som från given fil skriver ut alla rader med mer än 80 karaktärer i terminalen. 
 
 3. I Python-kursen skrev du ett sten-sax-påse spel. Översätt din kod från denna uppgift till c++-kod. Kommentera vad de olika delarna gör.
 
-4. Skriv ett program som byter ut (replaces) på följande whitespaces (mer än ett i rad) och tabs mot enkla från en given fil.
+4. Skriv ett program som byter ut på följande blanksteg (mer än ett i rad) och tabs mot enkelt blanksteg från en given fil.
 
     Länka test fil (fil är skapad)
 
@@ -110,7 +106,7 @@ for (int i = 0; i > 0; ++i) {}
 
 3. Förklara vad skillnaden mellan declaration och definition är. Sedan skriv om ditt sten-sax-påse program (övn. 2.3) så att variabler deklareras i en seperat headerfil.
 
-4. Vad är en referens i C++? Vad får följande kod för utmatning? (s.51 i C++ boken) 
+4. Vad är en referens i C++? Vad får följande kod för utmatning? 
 
 ```
     int i, &ri = i;
@@ -118,7 +114,7 @@ for (int i = 0; i > 0; ++i) {}
     std::cout << i << '\t' << ri << std::endl;
 ```
 
-6. Givet följande kod.  
+6. Givet följande kod:  
 ```
 #include <iostream>
 
@@ -140,11 +136,11 @@ int main() {
 }
 ```
 - Vad skiljer funktionerna?
-- Vad skrivs ut?
+- Vad får programmet för output?
 
 7. Varför bör större behållare kallas som referens in i funktioner? 
 8. Vad är ett namespace? Hur kallar man på en funktion inom ett namespace?
-10. Vilka av följande definitioner, om några, är ogiltiga? Varför? (tagen från s.51 2.15 i C++-boken)
+10. Vilka av följande definitioner, om några, är ogiltiga? Varför? 
 
 a.) int ival = 1.01;
 
@@ -193,7 +189,7 @@ int main() {
     }
 }
 ```
-- Prova köra koden. Vad är felmeddelandet? 
+- Provkör koden. Vad är felmeddelandet? 
 - Vad beror det på? 
 - Hur bör felet åtgärdas? 
 
@@ -210,13 +206,11 @@ int main() {
 - Lifetime of objects (stack vs heap)
 
 ### Excercises 
-1. a.) Vad är en stack?
-
-    b.) Vad är heapen?
-
-    c.) Förklara skillnaden mellan heap och stack. 
-    
-    d.) När bör en/ett variabler/objekt definereras på heapen istället för stacken? 
+1. Svara på följande frågor:
+- Vad är en stack?
+- Vad är en heap?
+- Förklara skillnaden mellan heap och stack.   
+- När bör en/ett variabler/objekt definereras på heapen istället för stacken? 
 
 2. Write a function that takes a string of braces, and determines if 
 the order of the braces is valid. It should return true if the string 
@@ -301,7 +295,7 @@ int main() {
     for (int i = 0; i < *var; ++i) {
         for (int j = 0; j < *var; ++j) {
             std::cout << arr[i][j] << std::endl;
-        }varningen
+        }
     return 0;
 }
 ```
@@ -370,7 +364,7 @@ int Example_func() const {
 ```
 d.) Vad är skillnaden mellan användningen av const i b.) och c.) ?
 
-12. Vilket felmeddelande får följande kod när det kompileras? Vad betyder det? Hur hade du löst det?
+12. Vilket felmeddelande får följande kod när det kompileras? Vad betyder felmeddelandet? Hur hade du löst det?
 
 ```
 #include <iostream>
@@ -392,7 +386,6 @@ int main() {
 ### Mainly covering 
 - Operator overloading
 - Function overloading
-
 
 ### Excercises 
 1. Använd koden du skrev i 5.3-5.8. Implementera följande *operator overloads*: 
@@ -589,7 +582,7 @@ c.)
 d.)
     virtual std::string output() = 0;
 ```
----
+
 7. Gör en egen abstrakta klass Djur. Den ska ha de rent virtuella funktionerna:
 
     Roar() - Skriv ut följande i terminalen:
