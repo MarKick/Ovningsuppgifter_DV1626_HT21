@@ -1,6 +1,6 @@
 ### Vecka 46
 
-1. Fördelar med att jobba med objekt av klasser istället för att endast använda funktioner är exempelvis inkapsling, arv och polymorfism. Dessa beteenden/ funktionaliteter stödjs ej av att endast funktioner.
+1. Fördelar med att jobba med objekt av klasser istället för att endast använda funktioner är exempelvis inkapsling, arv och polymorfism. Dessa beteenden/ funktionaliteter stödjs ej om endast funktioner används.
 
 2. Inkapsling är en klassfunktionalitet som grupperar datamedlemmar (eng. data members) och funktioner i en specificerad klass. I C++ tillåter inkapsling att gömma variabler eller dela funktioner och variabler med andra klasser. För att specificera vilka variabler/funktioner som ska vara gömda eller tillgängliga för andra objekt används *private* respektive *public* nyckelorden. 
 
@@ -39,7 +39,7 @@ Structs brukar framförallt användas för att gruppera data och klassfunkctiona
     }
     ```
     6.1.3) Markering av *const* på sådan vist innebär att inga modifieringar på objektet kan/kommer ske samt att medlemsfunktioner som inte är är konstanta kan kallas på. 
-    6.1.4) Skillnaden på de olika användningarna av *const* är att den första anger att variablen som returneras är *const* och returvärdet inte kan skrivas över. Den andra anger att objektet inte kommer förändras. 
+    6.1.4) Skillnaden på de olika användningarna av *const* är att den första anger att variablen som returneras är *const* och därav kan returvärdet inte kan skrivas över. Den andra anger att objektet inte kommer förändras efter funktionskallelse. 
 
 7. Problemet löses genom att ta bort const markeringen efter parametrarna. 
 

@@ -1,4 +1,4 @@
-#include "DynBasketArr.hpp"
+#include "BasketArr.hpp"
 #include "Ball.hpp"
 int main() {
     
@@ -8,6 +8,7 @@ int main() {
 
     Ball third(Balltype::football, 4.13, Color::red);
     third.setRadius(34.21);
+    
     bas.addBall(obj);
     bas.addBall(var);
     bas.addBall(third);
@@ -19,20 +20,14 @@ int main() {
     bas.RemoveBalls(obj);
     std::cout << bas.getBallCount() << std::endl;
     
-    int capacity = 10;
-    Ball** Footballs = new Ball*[capacity];
-    Ball** LargeBalls = new Ball*[capacity];
-    int size; 
-    
-    bas.getBallsofType(Balltype::football, Footballs, size);
-    
-    bas.getBallsofVolume(10.00,4000, LargeBalls, size);
+    int size = 10;
+    Ball* Footballs = new Ball[size];
+    int count = 0;
+    bas.getBallsofType(Balltype::football, Footballs, count);
+    Ball* LargeBalls = new Ball[size];
+    bas.getBallsofVolume(10.00,4000, LargeBalls,count);
     obj = var; 
 
-    for (int i = 0; i < capacity; ++i) {
-        delete Footballs[i];
-        delete LargeBalls[i];
-    }
     delete[] Footballs;
     delete[] LargeBalls;
     return 0;

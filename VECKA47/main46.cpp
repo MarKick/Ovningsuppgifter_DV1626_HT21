@@ -1,10 +1,10 @@
-#include "BasketArr.hpp"
+#include "BasketVec.hpp"
 #include "Ball.hpp"
 int main() {
     
     Ball obj;
     Ball var;
-    Basket bas(20);
+    Basket bas;
 
     Ball third(Balltype::football, 4.13, Color::red);
     third.setRadius(34.21);
@@ -20,14 +20,11 @@ int main() {
     bas.RemoveBalls(obj);
     std::cout << bas.getBallCount() << std::endl;
     
-    int size = 10;
-    Ball* Footballs = new Ball[size];
-    bas.getBallsofType(Balltype::football, Footballs, size);
-    Ball* LargeBalls = new Ball[size];
-    bas.getBallsofVolume(10.00,4000, LargeBalls,size);
+    std::vector<Ball> Footballs;
+    bas.getBallsofType(Balltype::football, Footballs);
+    std::cout << Footballs.size() << std::endl;
+    std::vector<Ball> LargeBalls;
+    bas.getBallsofVolume(10.00,4000, LargeBalls);
     obj = var; 
-
-    delete[] Footballs;
-    delete[] LargeBalls;
     return 0;
 }

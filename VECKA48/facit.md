@@ -4,7 +4,7 @@
 
 2. Se länk
 
-3. a.) 55 b.) Okänt beteende men troligtvist 0. c.) Se nedan
+3. a.) 55 b.) Okänt beteende, men troligtvist 0. c.) Se nedan
 ```c++
 #include <vector>
 #include <stdexcept>
