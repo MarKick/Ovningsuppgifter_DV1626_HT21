@@ -72,32 +72,32 @@ int Basket::getBallCount() {
 }
 
 void Basket::getBallsofType(Balltype type, Ball*& outArray, int& ballCountOut) {
-    int counter = 0;
+    ballCountOut = 0;
     for (int i = 0; i < m_size; ++i) {
         if (type == m_balls[i].getType()) {
-            outArray[counter] = m_balls[i];
-            ++counter;
+            outArray[ballCountOut] = m_balls[i];
+            ballCountOut++;
         }
     }
 }
 
 void Basket::getBallsColor(Color color, Ball*& outArray, int& ballCountOut) {
-    int counter = 0;
+    ballCountOut = 0;
     for (int i = 0; i < m_size; ++i) {
         if (color == m_balls[i].getColor()) {
-            outArray[counter] = m_balls[i];
-            ++counter;
+            outArray[ballCountOut] = m_balls[i];
+            ++ballCountOut;
         }
     }
 }
 
 void Basket::getBallsofVolume(float minVolume,float maxVolume,Ball*& outArray,int& ballCountOut) {
-    int counter = 0;
+    ballCountOut = 0;
     for (int i = 0; i < m_size; ++i) {
         if (minVolume <= m_balls[i].getVolume() 
             &&  m_balls[i].getVolume() <= maxVolume) {
-            outArray[counter] = m_balls[i];
-            ++counter;
+            outArray[ballCountOut] = m_balls[i];
+            ++ballCountOut;
         }
     }
 }
